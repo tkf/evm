@@ -32,7 +32,7 @@ fi
 
 cd $EMACS_DIR
 
-./configure --prefix=$PREFIX "${CONF_OPTS[@]}"
+CPPFLAGS=-P ./configure --prefix=$PREFIX "${CONF_OPTS[@]}"
 make bootstrap
 make install
 
