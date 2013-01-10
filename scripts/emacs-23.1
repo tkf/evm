@@ -2,8 +2,8 @@
 
 set -e
 
-URL="http://ftpmirror.gnu.org/emacs/emacs-23.4.tar.bz2"
-PREFIX="$EVM_HOME/installations/emacs-23.4"
+URL="http://ftpmirror.gnu.org/emacs/emacs-23.1.tar.bz2"
+PREFIX="$EVM_HOME/installations/emacs-23.1"
 CONF_OPTS=()
 
 mkdir -p $PREFIX
@@ -18,13 +18,13 @@ fi
 #      configure: error: crt*.o not found.
 #        Use --with-crt-dir to specify the location.
 
-TAR_FILE="$EVM_HOME/tars/emacs-23.4.tar.bz2"
+TAR_FILE="$EVM_HOME/tars/emacs-23.1.tar.bz2"
 if [[ ! -f $TAR_FILE ]]; then
   wget $URL -O $TAR_FILE
 fi
 
 CACHE_DIR="$EVM_HOME/cache"
-EMACS_DIR="$CACHE_DIR/emacs-23.4"
+EMACS_DIR="$CACHE_DIR/emacs-23.1"
 
 if [[ ! -d $EMACS_DIR ]]; then
   tar -xvjf $TAR_FILE -C $CACHE_DIR
